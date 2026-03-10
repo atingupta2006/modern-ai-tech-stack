@@ -4,10 +4,6 @@
 
 Modern AI Tech Stack in 3 Days: APIs, Open-Source Models, RAG and Responsible AI
 
-## Proposed By
-
-Darshan
-
 ## Course Overview
 
 This 3-day program provides a structured immersion into the modern AI technology stack. Participants move from API-based AI integration to open-source models, embeddings, vector search, and Retrieval-Augmented Generation (RAG). The program focuses on building practical AI workflows and understanding how enterprise-ready AI systems are designed, evaluated, and governed responsibly.
