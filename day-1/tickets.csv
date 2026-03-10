@@ -1,0 +1,19 @@
+ticket_id,subject,body,priority
+1,Login failed,"Getting error 500 when I click Forgot password. Tried from Chrome and mobile.",high
+2,Invoice discrepancy,"My last invoice shows double charge for the premium plan. Can I get a refund?",high
+3,Export to PDF,"We need an option to export reports to PDF for our monthly board meetings.",medium
+4,API rate limit,"Our integration is hitting 429 rate limit errors during peak hours. Can we increase the limit?",high
+5,Renewal date,"When does my annual subscription renew and will the price change?",low
+6,SSO not working,"Single sign-on with Azure AD fails for our team. Getting SAML assertion error.",high
+7,Dashboard slow,"The analytics dashboard takes over 30 seconds to load when filtering by date range.",medium
+8,Data export format,"Can we get CSV export with UTF-8 encoding? Current export breaks non-English characters.",medium
+9,Permission denied,"New team member cannot access the shared workspace. Shows 403 forbidden.",high
+10,Billing address update,"Need to update our billing address for tax compliance. Where is the setting?",low
+11,Webhook failures,"Our webhook endpoint receives duplicate events. Some events arrive out of order.",medium
+12,Mobile app crash,"App crashes on iOS 17 when opening notifications. Happens every time.",high
+13,Two-factor setup,"How do I enable 2FA for all users in my organization? Is there a bulk option?",medium
+14,Storage quota,"We are at 95% storage. What happens when we hit the limit? Can we buy more?",medium
+15,Custom domain SSL,"SSL certificate for our custom domain expired. Pages show security warning.",high
+16,Search not working,"Full-text search returns zero results for terms that exist in our documents.",high
+17,Onboarding help,"New to the platform. Is there a guided setup or onboarding checklist for teams?",low
+18,Audit log access,"Compliance requires us to export audit logs for the past 6 months. How?",medium
