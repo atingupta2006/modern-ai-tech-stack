@@ -1,5 +1,3 @@
----
-
 # Course Title
 
 Modern AI Tech Stack in 3 Days: APIs, Open-Source Models, RAG and Responsible AI
@@ -24,8 +22,6 @@ By the end of the program, participants will be able to:
 * Familiarity with JSON and CSV data formats
 * Laptop with Google Colab or Jupyter enabled
 * Interest in applied AI systems and open-source tools
-
----
 
 # Day 1 – APIs and Multimodal AI Workflows
 
