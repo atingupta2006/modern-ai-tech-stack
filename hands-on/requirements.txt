@@ -1,6 +1,6 @@
-# Day 1 – APIs and Multimodal AI Workflows
-# Python 3.11 required. Use a separate venv per day: .venv-day1 for day-1.
-# Create: python3.11 -m venv .venv-day1, activate, then pip install -r requirements.txt
+# Student Lab Pack – APIs and Multimodal AI Workflows
+# Python 3.11 required. Use a separate student venv: .venv-student for hands-on.
+# Create: python3.11 -m venv .venv-student, activate, then pip install -r requirements.txt
 # Secrets: copy .env.example to .env and set OPENAI_API_KEY. Config: config.json in this folder.
 # Jupyter: used for running notebooks with participants.
 
