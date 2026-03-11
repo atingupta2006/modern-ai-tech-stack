@@ -1,23 +1,15 @@
-# Student Lab Pack – Environment setup
+# Student Lab Pack – Environment Setup
 
-The Student Lab Pack notebooks run in a **production-like environment**: config and secrets are loaded from files, API calls use the same endpoints and patterns as in production, and there is no separate demo or dev mode. Use this guide to get the notebooks running with no code changes. Use **Python 3.11** and a **separate virtual environment for Student Lab Pack** (e.g. `.venv-student`).
+The Student Lab Pack notebooks run in a **production-like environment**: config and secrets are loaded from files, API calls use the same endpoints and patterns as in production. Use this guide to get the notebooks running with no code changes. Use **Python 3.11** and a **separate virtual environment** (e.g. `.venv-student`).
 
 ## 1. Python version
 
-Use **Python 3.11**. The notebooks use type hints (e.g. `str | None`, `list[dict]`) that require Python 3.10+; the course standard is 3.11.
-
-Check your version:
+Use **Python 3.11**. Check your version:
 ```bash
 python --version
 ```
-or
-```bash
-python3 --version
-```
 
-## 2. Create a virtual environment (for this pack)
-
-Use a **separate venv for this pack** so dependencies don’t conflict. For Student Lab Pack, create `.venv-student` in the **hands-on** folder (or in the repo root).
+## 2. Create a virtual environment
 
 **Windows (Command Prompt or PowerShell):**
 ```bash
@@ -41,39 +33,63 @@ With the virtual environment activated:
 pip install -r requirements.txt
 ```
 
-This installs the packages required for Student Lab Pack (`requests`, `python-dotenv`). Other modules used in the notebooks (`json`, `os`, `logging`, `csv`, `io`, `uuid`, `time`, `pathlib`) are part of the Python standard library.
+This installs:
+- **Day 1:** `requests`, `python-dotenv`, `notebook`, `jupyter`
+- **Day 2:** `transformers`, `sentence-transformers`, `faiss-cpu`, `torch`, `numpy`
+
+> **Note:** Day 2 packages include PyTorch (~2 GB download). If bandwidth is limited, install Day 1 packages first and add Day 2 packages before the second day:
+> ```bash
+> pip install requests python-dotenv notebook jupyter          # Day 1 only
+> pip install transformers sentence-transformers faiss-cpu torch  # Add before Day 2
+> ```
 
 ## 4. Secrets (.env) and config (config.json)
 
-- **Secrets (API keys):** Copy `.env.example` to `.env` in the **hands-on** folder and set your keys. Do not commit `.env`.
+- **Secrets:** Copy `.env.example` to `.env` and set your API key. Do not commit `.env`.
   ```bash
   cp .env.example .env
   ```
-  Edit `.env` and set:
+  Edit `.env`:
   ```
   OPENAI_API_KEY=your-openai-api-key-here
   ```
-- **Config (non-secret settings):** The file `config.json` in the hands-on folder holds API base URL, model names, and timeouts. You can edit it if you use a different provider or model; the notebooks read it automatically. Do not put secrets in `config.json`.
+- **Config:** `config.json` holds API base URL, model names, and timeouts. Edit if using a different provider.
 
-Notebooks load `.env` and `config.json` in their first code cell. **Start Jupyter from the hands-on folder** so the paths resolve correctly.
+## 5. Notebooks
 
-## 5. Run the notebooks
+| Day | Notebook | Topics |
+|-----|----------|--------|
+| 1 | `01-1-Python-and-AI-APIs.ipynb` | Python workflows, REST APIs, config, error handling, logging |
+| 1 | `02-Multimodal-AI-and-Assistant.ipynb` | Text/image/speech APIs, multimodal pipeline lab |
+| 2 | `03-HuggingFace-Embeddings-VectorSearch.ipynb` | HF models, embeddings, FAISS, semantic search lab |
 
-Open the notebooks in Jupyter or your IDE and run cells **in order from top to bottom**. No edits to the code are required when:
+Supporting files:
+- `00-2-Python-Basics-Reference.ipynb` — Python refresher (optional, no API key needed)
+- `tickets.csv` — sample data used in Day 1 and Day 2 labs
 
-- Python 3.11 is used
-- The virtual environment (e.g. `.venv-student`) is activated and `requirements.txt` is installed
-- `.env` exists with `OPENAI_API_KEY` set (for API-dependent cells)
-- `config.json` is present in the hands-on folder
-- You have internet access for API calls (and for the optional `httpbin.org` example in the first notebook)
+## 6. Run the notebooks
 
-## 6. Jupyter Notebook (included in requirements)
-
-Jupyter Notebook is installed with `pip install -r requirements.txt`. Start it from the **hands-on** folder so `.env` and `config.json` are found:
+Start Jupyter from the **hands-on** folder so `.env` and `config.json` resolve correctly:
 
 ```bash
 cd hands-on
 jupyter notebook
 ```
 
-Then open `01-1-Python-and-AI-APIs.ipynb`, `02-1-Multimodal-AI-Integration.ipynb`, or `03-1-Multimodal-Assistant.ipynb`.
+Run cells **in order from top to bottom**. No code edits required when:
+- Python 3.11 is used
+- `.venv-student` is activated with `requirements.txt` installed
+- `.env` exists with `OPENAI_API_KEY` set (Day 1)
+- `config.json` is present
+- Internet access available for API calls (Day 1) and model downloads (Day 2, first run)
+
+## 7. Pre-downloading HF models (optional, recommended for class)
+
+To avoid slow downloads during Day 2, pre-download the models:
+
+```bash
+python -c "from transformers import pipeline; pipeline('summarization', model='Falconsai/text_summarization')"
+python -c "from transformers import pipeline; pipeline('sentiment-analysis')"
+python -c "from transformers import pipeline; pipeline('question-answering')"
+python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+```

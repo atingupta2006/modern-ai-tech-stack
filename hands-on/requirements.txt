@@ -1,10 +1,18 @@
-# Student Lab Pack – APIs and Multimodal AI Workflows
+# Student Lab Pack – Modern AI Tech Stack in 3 Days
 # Python 3.11 required. Use a separate student venv: .venv-student for hands-on.
 # Create: python3.11 -m venv .venv-student, activate, then pip install -r requirements.txt
 # Secrets: copy .env.example to .env and set OPENAI_API_KEY. Config: config.json in this folder.
 # Jupyter: used for running notebooks with participants.
 
+# --- Day 1: APIs and Multimodal AI ---
 requests>=2.28.0,<3
 python-dotenv>=1.0.0,<2
 notebook>=7.0.0
 jupyter>=1.0.0
+
+# --- Day 2: HuggingFace, Embeddings, Vector Search ---
+transformers>=4.36.0,<5.0.0
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+torch>=2.0.0
+numpy>=1.24.0

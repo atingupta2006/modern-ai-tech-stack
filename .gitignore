@@ -436,6 +436,10 @@ FodyWeavers.xsd
 # Internal trainer notes (do not commit)
 .internal-notes/
 
+# Trainer timing/skip notes per notebook (instructor only)
+**/*-nb-*.md
+**/00-1-pre.md
+
 # Assessments and breakout scenarios (instructor only)
 **/assessments/
 
@@ -450,6 +454,7 @@ labs-references/
 # Build and generation scripts
 **/_build_*.py
 **/build_*_nb.py
+**/_gen*.py
 
 # Virtual environments
 .venv/
