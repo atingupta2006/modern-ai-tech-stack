@@ -1,0 +1,18 @@
+# Day 2 – Open-Source Models, Embeddings and Vector Search
+# Python 3.11 required. Use a separate venv per day: .venv-day2 for day-2.
+# Create: python3.11 -m venv .venv-day2, activate, then pip install -r requirements.txt
+# Config: config.json in this folder (model names, index settings).
+# Jupyter: used for running notebooks with participants.
+
+transformers>=4.36.0,<5
+datasets>=2.16.0,<3
+sentence-transformers>=2.3.0,<3
+faiss-cpu>=1.7.4,<2
+chromadb>=0.4.22,<1
+torch>=2.1.0,<3
+torchvision>=0.16.0,<1
+Pillow>=10.0.0,<11
+numpy>=1.24.0,<2
+python-dotenv>=1.0.0,<2
+notebook>=7.0.0
+jupyter>=1.0.0

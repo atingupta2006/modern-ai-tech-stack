@@ -76,4 +76,4 @@ cd day-1
 jupyter notebook
 ```
 
-Then open `01-Python-and-AI-APIs.ipynb`, `02-Multimodal-AI-Integration.ipynb`, or `03-Multimodal-Assistant.ipynb`.
+Then open `01-1-Python-and-AI-APIs.ipynb`, `02-1-Multimodal-AI-Integration.ipynb`, or `03-1-Multimodal-Assistant.ipynb`.

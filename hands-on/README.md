@@ -19,9 +19,16 @@ All notebooks assume a production-like setup: real API keys, config-driven URLs 
 
 ## In-session material (core)
 
-- **00-Python-Basics-Reference.ipynb** – Python basics reference (operators, types, control flow, lists, dicts, functions). Use when participants need grounding before or alongside the API material. No API key required; runnable on its own.
-- **01-Python-and-AI-APIs.ipynb** – Python for AI, REST APIs, requests, error handling, logging. Diagram: API flow (Block A/B/C). Frameworks table.
-- **02-Multimodal-AI-Integration.ipynb** – Text (primary), image (brief), speech (STT/TTS). Business-relevant scenarios. Pipeline diagram with blocks.
-- **03-Multimodal-Assistant.ipynb** – End-to-end multimodal pipeline: voice/text → LLM → text/speech. Chains the patterns from notebooks 01 and 02 into a complete assistant.
+- **00-2-Python-Basics-Reference.ipynb** – Python basics reference (operators, types, control flow, lists, dicts, functions). Use when participants need grounding before or alongside the API material. No API key required; runnable on its own.
+- **01-1-Python-and-AI-APIs.ipynb** – Python for AI, REST APIs, requests, error handling, logging. Diagram: API flow (Block A/B/C). Frameworks table.
+- **02-1-Multimodal-AI-Integration.ipynb** – Text (primary), image (brief), speech (STT/TTS). Business-relevant scenarios. Pipeline diagram with blocks.
+- **03-1-Multimodal-Assistant.ipynb** – End-to-end multimodal pipeline: voice/text → LLM → text/speech. Chains the patterns from notebooks 01 and 02 into a complete assistant.
+
+## Assessments
+
+- **00-1-pre.md** – Pre-assessment (live form link)
+- **01-2-day-1-nb-1.md** – Post-assessment for Notebook 01 (live form link)
+- **02-2-day-1-nb-2.md** – Post-assessment for Notebook 02 (live form link)
+- **03-2-day-1-nb-3.md** – Post-assessment for Notebook 03 (live form link)
 
 The notebooks in this folder cover the Day 1 topics: Python for AI workflows, AI APIs, and multimodal integration.
